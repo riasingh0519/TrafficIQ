@@ -1,9 +1,45 @@
-# Smart City Adaptive Traffic Signal Control & V2I Telemetry Server
+# 🚦 TrafficIQ
+### Smart City Adaptive Traffic Signal Control & V2I Telemetry System
 
-An enterprise-grade FastAPI backend architected for **Adaptive Traffic Signal Control and Vehicle-to-Infrastructure (V2I)** at **Intersection `SC-INT-74` ("Oak Street & 5th Avenue")**. 
+<p align="center">
+  <strong>Predictive Intelligence. Adaptive Traffic Control. Connected Mobility.</strong>
+</p>
 
-The system serves live machine learning predictions from `congestion_model.joblib`, computes real-time **SHAP feature driver attributions**, dynamically coordinates signal timing cycles using Webster's adaptive density method, and streams 1Hz telemetry over WebSocket (`/ws/traffic-stream`). It also includes a visual HTML5/Canvas Smart City Operations Dashboard at `/`.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python" />
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi" />
+  <img src="https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn" />
+  <img src="https://img.shields.io/badge/SHAP-Explainable%20AI-purple" />
+  <img src="https://img.shields.io/badge/WebSocket-Realtime-blue" />
+  <img src="https://img.shields.io/badge/Status-In%20Development-yellow" />
+</p>
 
+---
+
+## 📌 Overview
+
+**TrafficIQ** is an intelligent traffic management platform that combines Machine Learning, Explainable AI, Adaptive Traffic Signal Optimization, vehicle simulation, and Vehicle-to-Infrastructure (V2I) communication.
+
+The system aims to address urban traffic congestion by analyzing traffic conditions, predicting congestion levels, and dynamically optimizing traffic signal timings based on real-time vehicle demand.
+
+Designed around a simulated four-way smart city intersection, TrafficIQ integrates predictive analytics with adaptive signal control and real-time telemetry to demonstrate how intelligent transportation infrastructure can improve urban mobility.
+
+### 🎯 Project Objective
+
+To develop a simulation-backed smart traffic management system capable of predicting congestion, optimizing traffic signal cycles, monitoring vehicle movements, and providing real-time intersection intelligence.
+
+### 📍 Target Intersection
+
+| Parameter | Details |
+|---|---|
+| Intersection ID | `SC-INT-74` |
+| Location | Oak Street & 5th Avenue |
+| Configuration | Four-way intersection |
+| Signal Phases | 4 |
+| Adaptive Cycle Range | 60–130 seconds |
+| Telemetry Frequency | 1 Hz |
+
+---
 ---
 
 ## 🏗️ Architecture Overview
