@@ -62,12 +62,12 @@ graph TD
 
 | Module | Description |
 |---|---|
-| [`main.py`](file:///c:/Users/LENOVO/OneDrive/Desktop/epic project/main.py) | FastAPI application, CORS middleware, WebSocket ConnectionManager, lifespan 1Hz broadcaster, REST routes, and embedded live Operations Dashboard. |
-| [`ml_engine.py`](file:///c:/Users/LENOVO/OneDrive/Desktop/epic project/ml_engine.py) | Model loader for `congestion_model.joblib` with integrated **SHAP TreeExplainer** calculating directional feature attributions (`INCREASES_CONGESTION` / `DECREASES_CONGESTION`). |
-| [`traffic_simulator.py`](file:///c:/Users/LENOVO/OneDrive/Desktop/epic project/traffic_simulator.py) | High-fidelity 4-way intersection simulation (`SC-INT-74`), 2D vehicle physics (Intelligent Driver Model), queue tracking, V2I telematics, and Webster adaptive cycle timing (60–130s). |
-| [`models.py`](file:///c:/Users/LENOVO/OneDrive/Desktop/epic project/models.py) | Pydantic v2 schemas for all telemetry streams, SAE J2735 packet models, sensor health arrays, and API contracts. |
-| [`train_model.py`](file:///c:/Users/LENOVO/OneDrive/Desktop/epic project/train_model.py) | Dataset generator and training pipeline for `congestion_model.joblib` (achieves 90% classification accuracy). |
-| [`test_app.py`](file:///c:/Users/LENOVO/OneDrive/Desktop/epic project/test_app.py) | Comprehensive test suite validating REST endpoints, WebSocket connections, ML inference, and signal overrides. |
+| [`main.py`](./main.py) | Core FastAPI application responsible for CORS configuration, REST API endpoints, WebSocket connection management, lifecycle events, 1Hz telemetry broadcasting, and the embedded Smart City Operations Dashboard. |
+| [`ml_engine.py`](./ml_engine.py) | Machine Learning inference engine that loads `congestion_model.joblib`, performs real-time congestion classification, and integrates SHAP TreeExplainer for explainable predictions with directional feature attributions (`INCREASES_CONGESTION` / `DECREASES_CONGESTION`). |
+| [`traffic_simulator.py`](./traffic_simulator.py) | Four-way intersection simulation for `SC-INT-74`, featuring Intelligent Driver Model (IDM)-based vehicle dynamics, lane-wise queue tracking, vehicle movement, V2I telemetry generation, and Webster-based adaptive signal cycle optimization (60–130 seconds). |
+| [`models.py`](./models.py) | Pydantic v2 data models and validation schemas defining API request/response contracts, real-time telemetry structures, sensor health metrics, and SAE J2735-inspired V2I message representations. |
+| [`train_model.py`](./train_model.py) | Machine Learning training pipeline responsible for generating the training dataset, preprocessing traffic features, training the congestion classification model, and exporting the trained model as `congestion_model.joblib`. |
+| [`test_app.py`](./test_app.py) | Automated test suite covering REST API endpoints, WebSocket communication, ML inference, and adaptive signal override functionality. |
 
 ---
 
